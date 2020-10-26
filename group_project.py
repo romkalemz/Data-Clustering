@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 import seaborn as sn
 import numpy as np
+from sklearn.model_selection import KFold
 
 #read data from file
 pathToCustomerData = "~/Downloads/bank/bank.csv"
@@ -106,10 +107,10 @@ plt.tight_layout()
 plt.show()
 
 
-
 #correlation matrix
 corr_matrix = X.corr()
 sn.heatmap(corr_matrix, annot=True)
 
 plt.show()
 
+#cross validation
